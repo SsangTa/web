@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calendar.html</title>
     <style>
-        *{
+        * {
             font-size: 20px;
             box-sizing: border-box;
         }
-        
+
         .container {
             border: 1px solid gray;
             width: 80%;
             margin: 10px auto;
         }
 
-        .container > div {
+        .container>div {
             width: 100px;
             height: 100px;
             margin: 2px;
@@ -26,19 +27,46 @@
             display: inline-block;
         }
 
-        .container > .day {
+        .container>.day {
             background-color: yellow;
         }
 
-        .container > .days {
+        .container>.days {
             background-color: yellowgreen;
             font-size: 1.3em;
         }
     </style>
-    <script src="javascript/functuon1.js"></script>
     <script src="javascript/calendar.js"></script>
-    //
+
+    <script>
+        function getMonthDay(year, month) {
+            var tMonth = month - 1;
+            var today = new Date(year, tMonth, 1); // 현재 시점으로 Date 오브젝트.
+            return today.getDay();
+        }
+
+        function getLastDate(year, month) {
+            var lastDate = new Date(year, month, 0).getDate;
+            return lastDate;
+        }
+
+        // var year = 2020;
+        // var month = 9;
+        // var tMonth = month - 1;
+        // var tdate = 1;
+        // var today = new Date(year, tMonth, tdate); // 현재 시점으로 Date 오브젝트.
+
+        // var dayInfo = today.getDay();
+        // var lastDate = new Date(year, month, 0).getDate;
+
+        // console.log(today.getFullYear()); //년도정보
+        // console.log(today.getMonth() + 1); //월정보
+        // console.log(today.getDate()); //날짜정보
+        // console.log(today.getDay()); //요일정보
+    </script>
+
 </head>
+
 <body>
     <div class="container">
         <!--div.day{$}*31-->
@@ -75,7 +103,8 @@
         <div class="day">30</div>
         <div class="day">31</div>
         -->
-        
+
     </div>
 </body>
+
 </html>
