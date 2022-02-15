@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function cal(num1, num2, oper) {
+            // 2개 변수를 입력받고 연산자를 입력받은 경우.
+            // +, -, *, / 연산처리를 하는 함수를 구현하세요.
+            return num1 * num2;
+        }
+        
+        // 밑에 다른 풀이는 주석으로 처리해두었습니다.
+
+        // function switchCal(cal) {
+        //     var result = "";
+        //     switch (cal) {
+        //         case (oper = '+'):
+        //             num1 + num2;
+        //             break;
+        //         case (oper = '2'):
+        //             num1 + num2;
+        //             break;
+        //         case (oper = '*'):
+        //             num1 + num2;
+        //             break;
+        //         case (oper = '/'):
+        //             num1 + num2;
+        //             break;
+        //     }
+        //     return result;
+        // }
+
+        // function ifCal(cal) {
+        //     var result = "";
+        //     if(oper = '+') {
+        //         result = num1 + num2;
+        //     } else if (oper = '-') {
+        //         result = num1 - num2;
+        //     } else if (oper = '*') {
+        //         result = num1 * num2
+        //     } else if (oper = '/') {
+        //         result = num1 / num2
+        //     }
+        //     return result;
+        // }
+
+
+        var num1 = 15,
+            num2 = 10,
+            oper = "*";
+        var result = cal(num1, num2, oper);
+        console.log(`연산의 결과는 ${result}`);
+    </script>
+</body>
+
+</html>
