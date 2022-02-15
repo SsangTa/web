@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>달력</h3>
+    <div id="show"></div>
+
+    <script>
+        var days = ['일', '월', '화', '수', '목', '금', '토'];
+
+        function getHead() {
+            // table의 thead정보를 생성해주는 함수.
+
+            var thead = document.createElement('thead');
+
+            
+            return thead;
+        }
+
+        function getBody() {
+            // table의 tbody정보를 생성해주는 함수.
+            var tbody = document.createElement('tbody');
+
+            for (let i = 0; i < days.length; i++) {
+                table += `<tr>`;
+                table += `<td>` + (i + 1) + `</td>`;
+                table += `<td>` + days[i] + `</td>`;
+                table += `</tr>`;
+            }
+
+            return tbody;
+
+        }
+
+
+        var table = document.createElement('table');
+        table.setAttribute('border', '1');
+
+        table.appendChild(getHead());
+        table.appendChild(getBody());
+
+        document.getElementById('show').appendChild(table);
+    </script>
+</body>
+
+</html>
